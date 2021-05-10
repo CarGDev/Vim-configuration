@@ -128,7 +128,7 @@ function! SwitchFlowOrTsLsps(flowIndex)
   endif
 endfunction
 
-function! FindTsServer(idx, value) 
+function! FindTsServer(idx, value)
   return a:value.id == 'coc-tsserver'
 endfunction
 

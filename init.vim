@@ -5,7 +5,8 @@ source ~/.config/nvim/.vimrc
 set number
 set mouse=a
 set numberwidth=1
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard=unnamedplus
 syntax enable
 set showcmd
 set ruler
@@ -37,14 +38,15 @@ highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
-" Javascript
-autocmd BufRead *.js set filetype=javascript.jsx
-autocmd BufRead *.jsx set filetype=javascript.jsx
-augroup filetype javascript syntax=javascript
-
 "" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+
+" Javascript
+autocmd BufRead *.js set filetype=javascript.jsx
+autocmd BufRead *.jsx set filetype=javascript.jsx
+augroup filetype javascript syntax=javascript
+
 
