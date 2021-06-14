@@ -1,4 +1,8 @@
 call plug#begin('~/.vim/plugged')
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
 
 " Angular
 Plug 'iamcco/coc-angular'
@@ -60,7 +64,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " autocomplete
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " test
 Plug 'tyewang/vimux-jest-test'

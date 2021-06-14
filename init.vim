@@ -11,7 +11,7 @@ syntax enable
 set showcmd
 set ruler
 set cursorline
-set encoding=utf-8
+set encoding
 set showmatch
 set signcolumn=yes
 set expandtab
@@ -19,6 +19,10 @@ set tabstop=2 shiftwidth=2
 
 filetype plugin indent on
 
+syntax on
+if (&t_Co != 256)
+  set t_Co=256
+endif
 set list
 set listchars=eol:~,tab:>.,trail:~,extends:>,precedes:<,space:_
 
