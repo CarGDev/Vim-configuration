@@ -120,6 +120,8 @@ alias gch="git checkout"
 alias cl="clear"
 alias e="exit"
 alias l="ls -al"
+alias gdoc="cd ~/Documents/projects"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export TMPDIR="/tmp"

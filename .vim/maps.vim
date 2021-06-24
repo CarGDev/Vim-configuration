@@ -1,3 +1,18 @@
+" erase search value
+nnoremap <Leader>no :noh<CR>
+
+" select all column
+nnoremap <Leader>4 v$<CR>
+
+" reload file
+nnoremap <Leader>su :source %<CR>
+
+
+" normal/insert
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
+
 let mapleader=" "
 
 " testing

@@ -1,5 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
+" markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" If you have nodejs and yarn
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 Plug 'hzchirs/vim-material'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -50,7 +57,8 @@ Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
 " tabnine
-Plug 'zxqfl/tabnine-vim'
+" Plug 'codota/tabnine-vim'
+" Plug 'zxqfl/tabnine-vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
@@ -66,7 +74,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " autocomplete
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"{'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " test
 Plug 'tyewang/vimux-jest-test'

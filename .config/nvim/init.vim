@@ -34,13 +34,20 @@ set relativenumber
 so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
+set rtp+=~/tabnine-vim
+" set rtp+=$HOME/.vim/bundle/Vundle.vim
 
-set background=dark
-colorscheme vim-material
+" call vundle#begin()
+"   Plugin 'VundleVim/Vundle.vim'
+"   Plugin 'codota/tabnine-vim'
+" call vundle#end()
+
+" set background=dark
+" colorscheme vim-material
 " ayu colorscheme
 set termguicolors     " enable true colors support
-" let ayucolor="dark"   " for dark version of theme
-" colorscheme ayu
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
 " colorscheme gruvbox
 " let g:gruvbox_contrast_dark = "hard"
