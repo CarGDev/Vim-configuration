@@ -1,3 +1,5 @@
+let mapleader=" "
+
 " erase search value
 nnoremap <Leader>no :noh<CR>
 
@@ -7,13 +9,11 @@ nnoremap <Leader>4 v$<CR>
 " reload file
 nnoremap <Leader>su :source %<CR>
 
-
 " normal/insert
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
 
-let mapleader=" "
 
 " testing
 nnoremap <Leader>t :TestNearest<CR>
@@ -116,3 +116,8 @@ function! OpenTerminal()
 endfunction
 nnoremap <Leader>ter :call OpenTerminal()<CR>
 
+if has("autocmd")
+  au BufReadPost * if line("'\"") && line("'\"") <= line("$") | exe "normal `\"" | endif
+endif
+
+"nnoremap <Leader>Ct :call Toggle_transparent()<CR>

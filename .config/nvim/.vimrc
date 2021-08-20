@@ -4,7 +4,7 @@ set autoindent "aplica identacion automatica en vim
 set smartindent "aplica identacion de acuerdo al lenguaje
 set tabstop=2 "indica cuántos espacios tiene una tabulación
 set shiftwidth=2 "indica el nº de espacios para una indentación
-" set expandtab
+set expandtab
 set numberwidth=1 "columnas para la line de numeros
 set clipboard=unnamed "copia al portapapeles
 syntax enable "te remarca la sintaxis
@@ -29,7 +29,7 @@ colorscheme ayu
 " let g:gruvbox_contrast_dark = "hard"
 let g:deoplete#enable_at_startup = 1
 let g:jsx_ext_required = 0
-highlight Normal ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
 set laststatus=2
 set noshowmode
 

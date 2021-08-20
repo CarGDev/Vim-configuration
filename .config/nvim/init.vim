@@ -15,7 +15,8 @@ set encoding
 set showmatch
 set signcolumn=yes
 set expandtab
-set tabstop=2 shiftwidth=2
+set tabstop=2 
+set shiftwidth=2
 
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
@@ -42,17 +43,24 @@ set rtp+=~/tabnine-vim
 "   Plugin 'codota/tabnine-vim'
 " call vundle#end()
 
+set termguicolors     " enable true colors support
+"darker theme
+"let g:onedark_style = 'darker'
+"let g:onedark_style = 'cool'
+"let g:onedark_style = 'deep'
+"let g:onedark_style = 'warm'
+"let g:onedark_style = 'warmer'
+"colorscheme onedark
 " set background=dark
 " colorscheme vim-material
 " ayu colorscheme
-set termguicolors     " enable true colors support
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+"let ayucolor="dark"   " for dark version of theme
+"colorscheme ayu
 
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = "hard"
+ colorscheme gruvbox
+ let g:gruvbox_contrast_dark = "hard"
 
-highlight Normal ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
 set laststatus=2
 set noshowmode
 

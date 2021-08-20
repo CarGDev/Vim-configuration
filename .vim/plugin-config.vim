@@ -215,7 +215,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = '>'
 let g:airline#extensions#tabline#left_alt_sep = '>'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='ayu_dark'
+let g:airline_theme='onedark'
 
 " kite
 let g:kite_supported_languages = ['javascript', 'python']
@@ -226,6 +226,7 @@ let g:rainbow_active = 1
 " coc
 autocmd FileType python let b:coc_suggest_disable = 1
 autocmd FileType javascript let b:coc_suggest_disable = 1
+" autocmd FileType typescript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
 
 " deoplete
@@ -275,26 +276,26 @@ nmap <silent> gr <Plug>(coc-references)
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-autocmd BufEnter *.js :silent let myIndex = SearchPatternInFile("@flow") "| call SwitchFlowOrTsLsps(myIndex)
-autocmd BufEnter *.jsx :silent let myIndex = SearchPatternInFile("@flow") "| call SwitchFlowOrTsLsps(myIndex)
-
-"function! SwitchFlowOrTsLsps(flowIndex)
-"  silent let stats = CocAction("extensionStats")
-"  silent let tsserver = get(filter(copy(stats), function('FindTsServer')), 0)
-"  if(a:flowIndex == 0)
-"    if(tsserver.state == 'disabled')
-"      call CocActionAsync("toggleExtension", "coc-tsserver")
-"    endif
-"  else
-"    if(tsserver.state == 'activated')
-"      call CocActionAsync("toggleExtension", "coc-tsserver")
-"    endif
-"  endif
-"endfunction
+function! SwitchFlowOrTsLsps(flowIndex)
+  silent let stats = CocAction("extensionStats")
+  silent let tsserver = get(filter(copy(stats), function('FindTsServer')), 0)
+  if(a:flowIndex == 0)
+    if(tsserver.state == 'disabled')
+      call CocActionAsync("toggleExtension", "coc-tsserver")
+    endif
+  else
+    if(tsserver.state == 'activated')
+      call CocActionAsync("toggleExtension", "coc-tsserver")
+    endif
+  endif
+endfunction
 
 function! FindTsServer(idx, value)
   return a:value.id == 'coc-tsserver'
 endfunction
+
+autocmd BufEnter *.js :silent let myIndex = SearchPatternInFile("@flow") "| call SwitchFlowOrTsLsps(myIndex)
+autocmd BufEnter *.jsx :silent let myIndex = SearchPatternInFile("@flow") "| call SwitchFlowOrTsLsps(myIndex)
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
@@ -338,3 +339,15 @@ function! SearchPatternInFile(pattern)
     return search_result
 endfunction
 
+"let t:is_transparent = 0
+"function! Toggle_transparent()
+"    if t:is_transparent == 0
+"        hi Normal guibg=NONE ctermbg=NONE
+"        let t:is_transparent = 1
+"    else
+"        set background=dark
+"        let t:is_tranparent = 0
+"    endif
+
+
+"call Toggle_transparent()

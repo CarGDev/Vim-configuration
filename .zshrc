@@ -121,6 +121,7 @@ alias cl="clear"
 alias e="exit"
 alias l="ls -al"
 alias gdoc="cd ~/Documents/projects"
+alias nodeUp="sudo setcap 'cap_net_bind_service=+ep' $(readlink -f $(which node))"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+"theme dark
+Plug 'navarasu/onedark.nvim'
+
 " markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
