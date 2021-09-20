@@ -111,5 +111,13 @@ cp -r ./Vim-configuration/.vim ./vim
 cp -r ./Vim-configuration/.config/nvim/ ./.config/nvim
 cp -r ./Vim-configuration/.config/ranger/ ./.config/ranger
 
+cd ~/Downloads/
+mkdir types
+cd types
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+
 echo End
 
