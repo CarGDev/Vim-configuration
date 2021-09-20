@@ -111,10 +111,6 @@ alias sup="sudo apt update"
 alias sug="sudo apt upgrade -y"
 alias v="nvim"
 alias s="sudo"
-alias gl="git pull"
-alias ga="git add ."
-alias gc="git commit"
-alias G="git status"
 alias gb="git branch"
 alias gch="git checkout"
 alias cl="clear"
@@ -125,7 +121,9 @@ alias nodeUp="sudo setcap 'cap_net_bind_service=+ep' $(readlink -f $(which node)
 alias bitwarden="~/Downloads/Bitwarden-1.28.2-x86_64.AppImage"
 alias reCrontab="/etc/init.d/cron start"
 alias esCrontab="/etc/init.d/cron status"
-alias workNow="cd ~/Documents/projects/backendtortops && npm run dev & terminator"
+alias workNow="terminator & postman & dbeaver-ce & bitwarden & slack"
+alias openRan="cd ~/Documents/projects/ && ran"
+alias checkPorts="sudo netstat -tunlp"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
