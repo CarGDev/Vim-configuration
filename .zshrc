@@ -122,6 +122,10 @@ alias e="exit"
 alias l="ls -al"
 alias gdoc="cd ~/Documents/projects"
 alias nodeUp="sudo setcap 'cap_net_bind_service=+ep' $(readlink -f $(which node))"
+alias bitwarden="~/Downloads/Bitwarden-1.28.2-x86_64.AppImage"
+alias reCrontab="/etc/init.d/cron start"
+alias esCrontab="/etc/init.d/cron status"
+alias workNow="cd ~/Documents/projects/backendtortops && npm run dev & terminator"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

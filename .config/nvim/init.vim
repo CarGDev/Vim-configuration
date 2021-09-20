@@ -75,4 +75,8 @@ autocmd BufRead *.js set filetype=javascript.jsx
 autocmd BufRead *.jsx set filetype=javascript.jsx
 augroup filetype javascript syntax=javascript
 
-
+" augroup Indentation
+"   autocmd!
+"   autocmd BufWrite * :echom "Cats"
+"   augroup filetype javascript set shiftwidth=2
+" augroup END

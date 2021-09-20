@@ -1,5 +1,6 @@
 let mapleader=" "
 
+nnoremap <Leader>f :Neoformat<CR>
 " erase search value
 nnoremap <Leader>no :noh<CR>
 
@@ -28,6 +29,7 @@ nnoremap <Leader>< 10<C-w><
 nnoremap <Leader>; $a;<Esc>
 
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>e :xa<CR>
 nnoremap <Leader>q :q<CR>
 
 " shorter commands

@@ -233,6 +233,10 @@ autocmd FileType scss setl iskeyword+=@-@
 let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_completed_snippet = 1
 
+autocmd FileType javascript setlocal formatprg=prettier\ --single-quote\ --trailing-comma\ es5
+" Use formatprg when available
+let g:neoformat_try_formatprg = 1
+
 command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
 

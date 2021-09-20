@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" formater
+Plug 'sbdchd/neoformat'
+
 "theme dark
 Plug 'navarasu/onedark.nvim'
 
